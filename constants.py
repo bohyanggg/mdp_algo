@@ -9,7 +9,7 @@ WINDOW_SIZE = 800, 650
 RUN_SIMULATION = False
 
 # Connection to RPi
-RPI_HOST: str = "192.168.34.1"
+RPI_HOST: str = "192.168.50.2"
 RPI_PORT: int = 6000
 
 # Connection to PC
@@ -25,7 +25,7 @@ ROBOT_TURN_RADIUS = 30
 ROBOT_SPEED_PER_SECOND = 100  # should be 33.3
 # Please read briefing notes from Imperial
 ROBOT_S_FACTOR = ROBOT_LENGTH / ROBOT_TURN_RADIUS
-ROBOT_SAFETY_DISTANCE = 10
+ROBOT_SAFETY_DISTANCE = 0
 # Time provided for scanning an obstacle image in seconds.
 ROBOT_SCAN_TIME = 0.25
 
@@ -42,12 +42,12 @@ WEIGHTED_A_STAR = 1
 
 # Task 1 Simulator Config
 SIMULATOR_OBSTACLES = [
-    [10, 180, Direction.BOTTOM],
-    [70, 120, Direction.TOP],
-    [150, 160, Direction.BOTTOM],
-    [190, 90, Direction.LEFT],
-    [100, 70, Direction.LEFT],
-    [130, 20, Direction.LEFT],
+[100, 0, Direction.TOP],
+    [170, 50, Direction.TOP],
+    [150, 150, Direction.BOTTOM],
+    [80, 100, Direction.RIGHT],
+    [20, 140, Direction.BOTTOM],
+    [90, 190, Direction.RIGHT],
 ]
 
 # Task 2 30x10 grid
@@ -56,10 +56,10 @@ TASK2_WIDTH = 150
 TASK2_SCALING_FACTOR = 1
 
 # Task 2 Simulator Config
-DISTANCE1 = 60  # First obstacle distance from robot (60-150):
+DISTANCE1 = 100  # First obstacle distance from robot (60-150):
 DISTANCE2 = 60  # Second obstacle distance from first obstacle (60-150):
 OBSTACLE1 = "L"  # First obstacle direction (L/R)
-OBSTACLE2 = "L"  # Second obstacle direction (L/R)
+OBSTACLE2 = "R"  # Second obstacle direction (L/R)
 
 
 BUTTON_LENGTH = 120

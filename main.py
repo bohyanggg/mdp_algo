@@ -300,7 +300,7 @@ def sim():
 def test():
     print("start test")
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.connect(("192.168.34.1", 6000))
+    server.connect(("192.168.50.2", 6000))
     print("connected")
     server.send("12345")
     msg = server.recv(1024)
@@ -309,12 +309,12 @@ def test():
 
 if __name__ == "__main__":
     # Test connection with RPI
-    # test()
+    #test()
 
     # Run virtual simulator
     sim()
 
     # Run on RPI
-    # initialize()
+    #initialize()
 
     pass

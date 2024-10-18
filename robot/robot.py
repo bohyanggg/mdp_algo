@@ -71,9 +71,12 @@ class Robot:
         Convert the list of command objects to corresponding list of messages.
         """
         print("Converting commands to string...", end="")
+        
         string_commands = [
-            command.convert_to_message() for command in self.hamiltonian.commands
+            item for command in self.hamiltonian.commands
+            for item in (command.convert_to_message() if isinstance(command.convert_to_message(), list) else [command.convert_to_message()])
         ]
+
         print("Done!")
         return string_commands
 
